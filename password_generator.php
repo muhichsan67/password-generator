@@ -1,10 +1,9 @@
+$characters 	= 12;
 $array_password = array(
   "character" => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
   "number"    => '0123456789',
   "symbol"    => '!@#$%^&*()'
 );
-
-$characters 	= 12;
 $array_rule = array(
   "character" => 5,
   "number"    => 5,
@@ -27,10 +26,10 @@ while ($total_character < $characters) {
   $randomString = $characters[rand(0, $charactersLength - 1)];
   
   if ($array_update_rule[$random_key] < $array_rule[$random_key]) {
-  	$password .= $randomString;
-    $array_update_rule[$random_key] += 1;
-    $total_character += 1;
+      $password .= $randomString;
+      $array_update_rule[$random_key] += 1;
+      $total_character += 1;
   }
 }
 
-return $passowrd;
+return $password;
